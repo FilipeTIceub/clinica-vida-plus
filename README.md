@@ -1,6 +1,6 @@
 # Clínica Vida+ — Landing Page Estática
 
-Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento de Soluções para Clínica de Saúde.
+Projeto acadêmico desenvolvido para a disciplina de Programação e Desenvolvimento Web.
 
 ## Autor
 - Nome: Filipe de Almeida Pantoja da Costa
