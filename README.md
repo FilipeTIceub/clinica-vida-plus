@@ -1,123 +1,54 @@
-# Clínica Vida+ — Projeto Integrado (Landing Page + API + Agendamento + Docker)
+# Clínica Vida+ — Landing Page Estática
 
-Projeto desenvolvido para a disciplina de Programação e Desenvolvimento Web.
+Projeto acadêmico desenvolvido para a disciplina de Desenvolvimento de Soluções para Clínica de Saúde.
 
 ## Autor
 - Nome: Filipe de Almeida Pantoja da Costa
 - RA: 72500912
 - GitHub: https://github.com/FilipeTIceub
 
----
+## Acesso online
+- Landing Page publicada: https://clinica-vida-plus-eks40gml2-filipeticeubs-projects.vercel.app
 
-## Escopo implementado
+## Objetivo
+Desenvolver uma landing page estática para apresentar uma clínica de saúde, seus serviços, equipe e formulário de contato.
 
-### Projeto 01 — Landing Page Estática
-- Título da clínica
-- Seção de serviços com imagens
-- Equipe fictícia (3 membros com foto e cargo)
-- Formulário estático (Nome, E-mail, Cidade, Estado)
-- Estrutura HTML com níveis de cabeçalho
+## Requisitos atendidos
+- Título da página
+- Mínimo de 2 imagens dos produtos/serviços
+- Descrição dos serviços
+- Equipe fictícia (mínimo 3 membros com foto e cargo)
+- Uso de pelo menos 2 níveis de cabeçalhos
+- Formulário estático com Nome, E-mail, Cidade e Estado
 
-### Projeto 02 — API de Profissionais
-- Listagem de profissionais
-- Filtro por especialidade
-- Busca por nome
-- Endpoint de saúde da API
-
-### Projeto 03 — Sistema de Agendamento
-- Criação de agendamento
-- Listagem de agendamentos
-- Consulta por CPF
-- Cancelamento de agendamento (por ID e por CPF+ID)
-
-### Projeto 04 — Banco + Containers
-- MySQL com scripts SQL (schema + seed)
-- API Node.js (Express + mysql2)
-- Adminer para administração do banco
-- Subida completa com Docker Compose
-
----
+## Tecnologias utilizadas
+- HTML5
+- CSS3
+- JavaScript (validação local do formulário)
 
 ## Estrutura do projeto
-
 ```text
-clinica-vida-plus/
-├─ docker-compose.yml
-├─ README.md
-├─ frontend/
-│  ├─ index.html
-│  └─ img/
-│     ├─ consulta.jpg
-│     ├─ exames.jpg
-│     ├─ nutricao.jpg
-│     ├─ joao.jpg
-│     ├─ maria.jpg
-│     └─ pedro.jpg
-├─ backend/
-│  ├─ server.js
-│  ├─ package.json
-│  ├─ Dockerfile
-│  └─ .dockerignore
-└─ database/
-   ├─ schema.sql
-   └─ seed.sql
+frontend/
+├─ index.html
+└─ img/
+   ├─ consulta.jpg
+   ├─ exames.jpg
+   ├─ nutricao.jpg
+   ├─ joao.jpg
+   ├─ maria.jpg
+   └─ pedro.jpg
 ```
-
----
 
 ## Como executar localmente
+1. Abra a pasta `frontend`.
+2. Abra o arquivo `index.html` no navegador.
 
-### Pré-requisitos
-- Docker Desktop instalado e em execução
-- Virtualização habilitada no BIOS/UEFI
+Opcional (VS Code + Live Server):
+1. Clique com botão direito no `index.html`.
+2. Selecione “Open with Live Server”.
 
-### Comandos
-```bash
-docker compose down -v
-docker compose up -d --build
-docker compose ps
-```
-
----
-
-## Endpoints e acessos
-
-- API Health: `http://localhost:3000/health`
-- Profissionais: `http://localhost:3000/profissionais`
-- Profissionais por especialidade:
-  `http://localhost:3000/profissionais?especialidade=cardiologia`
-- Busca por nome:
-  `http://localhost:3000/profissionais/nome/joao`
-- Listar agendamentos:
-  `http://localhost:3000/agendamentos`
-- Consultar agendamento por CPF:
-  `http://localhost:3000/agendamentos/cpf/03848970104`
-- Adminer: `http://localhost:8080`
-
-### Login do Adminer
-- Sistema: `MySQL`
-- Servidor: `db`
-- Usuário: `root`
-- Senha: `root`
-- Base: `clinica`
-
----
-
-## Exemplos de testes (curl)
-
-Criar agendamento:
-```bash
-curl -X POST http://localhost:3000/agendamentos \
--H "Content-Type: application/json" \
--d "{\"paciente_id\":1,\"profissional_id\":1,\"data_agendamento\":\"2026-04-25 10:00:00\"}"
-```
-
-Consultar por CPF:
-```bash
-curl http://localhost:3000/agendamentos/cpf/03848970104
-```
-
-Cancelar por CPF + ID:
-```bash
-curl -X DELETE http://localhost:3000/agendamentos/cpf/03848970104/1
-```
+## Funcionalidades da página
+- Seção de serviços com imagens ilustrativas
+- Seção de equipe com profissionais fictícios
+- Formulário de contato estático com validação de campos obrigatórios
+- Layout responsivo para desktop e mobile
