@@ -1,6 +1,6 @@
 # Clínica Vida+ — Projeto Integrado (Landing Page + API + Agendamento + Docker)
 
-Projeto desenvolvido para a disciplina de Desenvolvimento de Soluções para Clínica de Saúde.
+Projeto desenvolvido para a disciplina de Programação e Desenvolvimento Web.
 
 ## Autor
 - Nome: Filipe de Almeida Pantoja da Costa
